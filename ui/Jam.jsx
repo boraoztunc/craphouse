@@ -1,13 +1,13 @@
-import React, {useEffect, useMemo} from 'react';
-import {currentId} from './logic/identity';
-import {initializeIdentity} from './logic/backend';
+import React, { useEffect, useMemo } from 'react';
+import { currentId } from './logic/identity';
+import { initializeIdentity } from './logic/backend';
 import Modals from './views/Modal';
-import state, {swarm} from './logic/state';
-import {mergeClasses} from './logic/util';
-import {debug} from './lib/state-utils';
-import {staticConfig} from './logic/config';
-import {useProvideWidth, WidthContext} from './logic/tailwind-mqp';
-import {set, use} from 'use-minimal-state';
+import state, { swarm } from './logic/state';
+import { mergeClasses } from './logic/util';
+import { debug } from './lib/state-utils';
+import { staticConfig } from './logic/config';
+import { useProvideWidth, WidthContext } from './logic/tailwind-mqp';
+import { set, use } from 'use-minimal-state';
 import Start from './views/Start';
 import Me from './views/Me';
 import PossibleRoom from './views/PossibleRoom';
@@ -34,7 +34,7 @@ export default function Jam({
             newRoom={dynamicConfig.room}
             roomIdentity={dynamicConfig.identity}
             roomIdentityKeys={dynamicConfig.keys}
-            onError={({error}) => (
+            onError={({ error }) => (
               <Start urlRoomId={route} roomFromURIError={!!error.createRoom} />
             )}
           />
@@ -50,8 +50,8 @@ export default function Jam({
   // initialize identity, swarm
   useEffect(() => {
     initializeIdentity();
-    swarm.config({myPeerId: currentId()});
-    set(swarm.myPeerState, {inRoom: false});
+    swarm.config({ myPeerId: currentId() });
+    set(swarm.myPeerState, { inRoom: false });
   }, []);
 
   // toggle debugging
@@ -68,7 +68,7 @@ export default function Jam({
   }, [dynamicConfig.debug]);
 
   // global styling
-  let {color} = use(state, 'room');
+  let { color } = use(state, 'room');
   let [width, , setContainer, mqp] = useProvideWidth();
   let backgroundColor = useMemo(
     () => (color && color !== '#4B5563' ? hexToRGB(color, '0.123') : undefined),
@@ -78,7 +78,7 @@ export default function Jam({
   return (
     <div
       ref={el => setContainer(el)}
-      className={mqp(mergeClasses('jam sm:pt-12', className), width)}
+      className={mqp(mergeClasses('jam', className), width)}
       style={{
         position: 'relative',
         height: '100%',

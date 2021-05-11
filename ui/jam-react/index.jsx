@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Jam({jamUrl, roomId, newRoom, ...props}) {
+export default function Jam({ jamUrl, roomId, newRoom, ...props }) {
   jamUrl = jamUrl || 'https://jam.systems';
   if (!jamUrl.endsWith('/')) jamUrl = jamUrl + '/';
   let hash = !newRoom ? '' : '#' + encodeParams(newRoom);

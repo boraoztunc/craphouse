@@ -1,5 +1,5 @@
 import React from 'react';
-import {render} from 'react-dom';
+import { render } from 'react-dom';
 import Jam from '../index.jsx';
 
 render(<App />, document.getElementById('root'));
@@ -7,8 +7,8 @@ render(<App />, document.getElementById('root'));
 function App() {
   let ids = ['01', '02', '03'];
   return (
-    <div style={{padding: '1rem'}}>
-      <h1>Jam: My own Clubhouse!!!!</h1>
+    <div style={{ padding: '1rem' }}>
+      <h1>Jam: My own Clubhouse!!! heyy!</h1>
       <div>
         {ids.map(id => (
           <Jam
@@ -20,7 +20,7 @@ function App() {
               description: 'This Room was created by a React component',
               color: '#000000',
             }}
-            style={{width: '400px', height: '600px'}}
+            style={{ width: '400px', height: '600px' }}
           />
         ))}
       </div>

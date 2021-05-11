@@ -49,7 +49,7 @@ services:
     volumes:
       - ../data/postgres:/var/lib/postgresql/data
   ui:
-    image: registry.gitlab.com/jam-systems/jam/ui:${CHANNEL}
+    image: registry.gitlab.com/jam-systems/jam/ui:stable
     restart: always
     environment:
       - JAM_HOST
@@ -74,7 +74,7 @@ services:
       - "../data/pantryredis:/data"
     command: "redis-server --appendonly yes"
   pantry:
-    image: registry.gitlab.com/jam-systems/jam/pantry:${CHANNEL}
+    image: registry.gitlab.com/jam-systems/jam/pantry:stable
     restart: always
     environment:
       - JAM_HOST

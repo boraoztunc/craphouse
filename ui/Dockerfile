@@ -4,7 +4,7 @@ COPY yarn.lock package.json ./
 
 RUN yarn install && yarn global add esbuild
 COPY . .
-RUN yarn build
+RUN yarn start
 
 FROM node:alpine
 

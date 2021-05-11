@@ -138,9 +138,9 @@ app.use(async (req, res) => {
     req.path === '/'
       ? defaultMetaInfo
       : {
-          ...defaultMetaInfo,
-          ...(await getRoomMetaInfo(req.path)),
-        };
+        ...defaultMetaInfo,
+        ...(await getRoomMetaInfo(req.path)),
+      };
 
   if (req.path.includes('/_/integrations/oembed')) {
     if (!req.query.url?.startsWith(`${urls.jam}/`)) return res.json();
@@ -166,7 +166,7 @@ app.use(async (req, res) => {
     const calendar = ical({
       domain: urls.jam,
       name: metaInfo.ogTitle,
-      prodId: {company: 'Jam', product: 'Jam'},
+      prodId: { company: 'Jam', product: 'Jam' },
       timezone: metaInfo.schedule?.timezone,
     });
 
@@ -252,9 +252,8 @@ app.use(async (req, res) => {
       rel="stylesheet"
     />
     <link rel="manifest" href="<%= metaInfo.ogUrl %>/manifest.json">
-    <link rel="alternate" type="application/json+oembed" href="${
-      urls.jam
-    }/_/integrations/oembed?url=<%= metaInfo.ogUrl %>">
+    <link rel="alternate" type="application/json+oembed" href="${urls.jam
+      }/_/integrations/oembed?url=<%= metaInfo.ogUrl %>">
     <title><%= metaInfo.ogTitle %></title>
   </head>
   <body>
@@ -266,7 +265,7 @@ app.use(async (req, res) => {
   </body>
 </html>
 `,
-      {metaInfo}
+      { metaInfo }
     )
   );
 });
