@@ -1,8 +1,8 @@
 .idea
 *.iml
 node_modules
-ui/public/bundle*
-ui/bundle*
+# ui/public/bundle*
+# ui/bundle*
 *.DS_Store
 .env
 .venv
