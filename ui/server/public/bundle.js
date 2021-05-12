@@ -39194,7 +39194,7 @@ function Start({urlRoomId, roomFromURIError}) {
   }, /* @__PURE__ */ import_react14.default.createElement("div", {
     className: "grid gap-6 content-center"
   }, /* @__PURE__ */ import_react14.default.createElement(icon_default, null), /* @__PURE__ */ import_react14.default.createElement(crap_default, null), /* @__PURE__ */ import_react14.default.createElement("h1", {
-    className: "text-lg text-white"
+    className: "text-white"
   }, "Craphouse is an audio space for chatting, brainstorming, debating, or any crap you want to talk about."), /* @__PURE__ */ import_react14.default.createElement("form", {
     className: "pt-6",
     onSubmit: submit
@@ -39308,7 +39308,17 @@ function Start({urlRoomId, roomFromURIError}) {
     onClick: submit,
     type: "button",
     className: "inline-flex items-center px-6 py-3 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 max-w-max focus:ring-indigo-500"
-  }, "Start a room \u2192"))), /* @__PURE__ */ import_react14.default.createElement("div", null, /* @__PURE__ */ import_react14.default.createElement("img", {
+  }, "Start a room \u2192")), /* @__PURE__ */ import_react14.default.createElement("p", {
+    className: "text-lg text-white opacity-70 mt-8"
+  }, "built w/ open source  ", /* @__PURE__ */ import_react14.default.createElement("a", {
+    target: "_blank",
+    className: "underline",
+    href: "https://twitter.com/jam_systems"
+  }, "@jam_systems"), " \u2665 ", /* @__PURE__ */ import_react14.default.createElement("a", {
+    href: "https://1984.design",
+    target: "_blank",
+    className: "underline"
+  }, "1984"))), /* @__PURE__ */ import_react14.default.createElement("div", null, /* @__PURE__ */ import_react14.default.createElement("img", {
     style: {maxHeight: "95%"},
     src: "img/circles.svg"
   }))));
@@ -39436,6 +39446,11 @@ function EnterRoom({
   let mqp = useMqParser();
   let otherDevice = use(state_default, "otherDeviceInRoom");
   return /* @__PURE__ */ import_react17.default.createElement(Container, null, /* @__PURE__ */ import_react17.default.createElement("div", {
+    style: {maxWidth: "200px"},
+    className: "absolute left-10 grid gap-4 place-items-center"
+  }, /* @__PURE__ */ import_react17.default.createElement(icon_default, null), /* @__PURE__ */ import_react17.default.createElement(crap_default, {
+    style: {width: "100%"}
+  })), /* @__PURE__ */ import_react17.default.createElement("div", {
     className: mqp("p-2 pt-60 md:p-10 md:pt-60")
   }, /* @__PURE__ */ import_react17.default.createElement(RoomHeader, __spreadValues({}, {name, description, logoURI, buttonURI, buttonText})), /* @__PURE__ */ import_react17.default.createElement("ol", {
     className: "hidden flex space-x-4 pt-6"
@@ -41067,7 +41082,7 @@ function Room({room, roomId}) {
   return /* @__PURE__ */ import_react29.default.createElement(Container, {
     style: {display: "flex", flexDirection: "column"}
   }, /* @__PURE__ */ import_react29.default.createElement("div", {
-    style: {maxWidth: "250px"},
+    style: {maxWidth: "200px"},
     className: "absolute left-10 grid gap-4 place-items-center"
   }, /* @__PURE__ */ import_react29.default.createElement(icon_default, null), /* @__PURE__ */ import_react29.default.createElement(crap_default, {
     style: {width: "100%"}

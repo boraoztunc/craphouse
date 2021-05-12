@@ -1,10 +1,12 @@
 import React from 'react';
-import {use} from 'use-minimal-state';
-import {enterRoom} from '../logic/main';
+import { use } from 'use-minimal-state';
+import { enterRoom } from '../logic/main';
 import state from '../logic/state';
-import {useMqParser} from '../logic/tailwind-mqp';
+import { useMqParser } from '../logic/tailwind-mqp';
 import Container from './Container';
 import RoomHeader from './RoomHeader';
+import Icon from '../icons/icon'
+import Crap from '../icons/crap'
 
 const iOS =
   /^iP/.test(navigator.platform) ||
@@ -26,8 +28,12 @@ export default function EnterRoom({
   let otherDevice = use(state, 'otherDeviceInRoom');
   return (
     <Container>
+      <div style={{ maxWidth: '200px' }} className='absolute left-10 grid gap-4 place-items-center'>
+        <Icon></Icon>
+        <Crap style={{ width: '100%' }}></Crap>
+      </div>
       <div className={mqp('p-2 pt-60 md:p-10 md:pt-60')}>
-        <RoomHeader {...{name, description, logoURI, buttonURI, buttonText}} />
+        <RoomHeader {...{ name, description, logoURI, buttonURI, buttonText }} />
 
         {/*
             a snapshot of current or nticipated speakers

@@ -117,7 +117,7 @@ export default function Room({ room, roomId }) {
 
   return (
     <Container style={{ display: 'flex', flexDirection: 'column' }}>
-      <div style={{ maxWidth: '250px' }} className='absolute left-10 grid gap-4 place-items-center'>
+      <div style={{ maxWidth: '200px' }} className='absolute left-10 grid gap-4 place-items-center'>
         <Icon></Icon>
         <Crap style={{ width: '100%' }}></Crap>
       </div>

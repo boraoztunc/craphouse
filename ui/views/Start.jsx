@@ -60,7 +60,7 @@ export default function Start({ urlRoomId, roomFromURIError }) {
         <div className="grid gap-6 content-center">
           <Icon></Icon>
           <Crap></Crap>
-          <h1 className="text-lg text-white">Craphouse is an audio space for chatting, brainstorming, debating, or any crap you want to talk about.</h1>
+          <h1 className="text-white">Craphouse is an audio space for chatting, brainstorming, debating, or any crap you want to talk about.</h1>
           <form className="pt-6" onSubmit={submit}>
             <div className="hidden">
               <input
@@ -202,6 +202,7 @@ export default function Start({ urlRoomId, roomFromURIError }) {
               Start a room &#8594;
           </button>
           </form>
+          <p className="text-lg text-white opacity-70 mt-8">built w/ open source  <a target="_blank" className="underline" href="https://twitter.com/jam_systems">@jam_systems</a> ♥ <a href="https://1984.design" target="_blank" className="underline">1984</a></p>
         </div>
         <div>
           <img style={{ maxHeight: "95%" }} src="img/circles.svg"></img>
