@@ -28,7 +28,9 @@ export default function EnterRoom({
   return (
     <Container>
       <div style={{ maxWidth: '200px' }} className='absolute left-10 grid gap-4 place-items-center'>
-        <Icon style={{ maxWidth: "100%" }}></Icon>
+        <a href="/">
+          <Icon style={{ maxWidth: "100%" }}></Icon>
+        </a>
       </div>
       <div className={mqp('p-2 pt-60 md:p-10 md:pt-60')}>
         <RoomHeader {...{ name, description, logoURI, buttonURI, buttonText }} />

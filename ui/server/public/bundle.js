@@ -39499,9 +39499,11 @@ function EnterRoom({
   return /* @__PURE__ */ import_react18.default.createElement(Container, null, /* @__PURE__ */ import_react18.default.createElement("div", {
     style: {maxWidth: "200px"},
     className: "absolute left-10 grid gap-4 place-items-center"
+  }, /* @__PURE__ */ import_react18.default.createElement("a", {
+    href: "/"
   }, /* @__PURE__ */ import_react18.default.createElement(icon_crap_default, {
     style: {maxWidth: "100%"}
-  })), /* @__PURE__ */ import_react18.default.createElement("div", {
+  }))), /* @__PURE__ */ import_react18.default.createElement("div", {
     className: mqp("p-2 pt-60 md:p-10 md:pt-60")
   }, /* @__PURE__ */ import_react18.default.createElement(RoomHeader, __spreadValues({}, {name, description, logoURI, buttonURI, buttonText})), /* @__PURE__ */ import_react18.default.createElement("ol", {
     className: "hidden flex space-x-4 pt-6"
