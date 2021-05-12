@@ -235,7 +235,7 @@ app.use(async (req, res) => {
     <meta property="og:url" content="<%= metaInfo.ogUrl %>" />
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary">
-    <meta property="twitter:image" content="<%= metaInfo.ogUrl %>">
+    <meta property="twitter:image"  content="<%= metaInfo.ogImage %>"
     <meta property="twitter:domain" content="<%= metaInfo.ogUrl %>">
     <meta property="twitter:url" content="<%= metaInfo.ogUrl %>">
     <meta name="twitter:creator" content="Craphouse">
