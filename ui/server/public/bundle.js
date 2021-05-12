@@ -41140,9 +41140,11 @@ function Room({room, roomId}) {
   }, /* @__PURE__ */ import_react30.default.createElement("div", {
     style: {maxWidth: "200px"},
     className: "absolute left-10 grid gap-4 place-items-center"
-  }, /* @__PURE__ */ import_react30.default.createElement(icon_default, null), /* @__PURE__ */ import_react30.default.createElement(crap_default, {
-    style: {width: "100%"}
-  })), /* @__PURE__ */ import_react30.default.createElement("div", {
+  }, /* @__PURE__ */ import_react30.default.createElement("a", {
+    href: "/"
+  }, /* @__PURE__ */ import_react30.default.createElement(icon_crap_default, {
+    style: {maxWidth: "100%"}
+  }))), /* @__PURE__ */ import_react30.default.createElement("div", {
     className: mqp("flex flex-col pt-2 md:pt-10 md:p-10"),
     style: {flex: "1", overflowY: "auto", minHeight: "0"}
   }, /* @__PURE__ */ import_react30.default.createElement("div", {

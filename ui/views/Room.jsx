@@ -15,8 +15,7 @@ import UAParser from 'ua-parser-js';
 import { usePushToTalk } from '../logic/hotkeys';
 import { disconnectRoom, maybeConnectRoom } from '../logic/room';
 import { stopAudio } from '../logic/audio';
-import Icon from '../icons/icon'
-import Crap from '../icons/crap'
+import Icon from '../icons/icon-crap'
 const userAgent = UAParser();
 const inWebView =
   userAgent.browser?.name === 'Chrome WebView' ||
@@ -118,8 +117,9 @@ export default function Room({ room, roomId }) {
   return (
     <Container style={{ display: 'flex', flexDirection: 'column' }}>
       <div style={{ maxWidth: '200px' }} className='absolute left-10 grid gap-4 place-items-center'>
-        <Icon></Icon>
-        <Crap style={{ width: '100%' }}></Crap>
+        <a href="/">
+          <Icon style={{ maxWidth: "100%" }}></Icon>
+        </a>
       </div>
       <div
         className={mqp('flex flex-col pt-2 md:pt-10 md:p-10')}
