@@ -38370,7 +38370,7 @@ var breakpoints = {
   sm: 640,
   md: 768,
   lg: 1024,
-  xl: 1280
+  xl: 1140
 };
 var allBreakpoints = new Set(Object.keys(breakpoints));
 var WidthContext = (0, import_react6.createContext)(document.body.offsetWidth);
