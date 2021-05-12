@@ -47,7 +47,7 @@ export default function Jam({
     if (staticConfig_) set(staticConfig, staticConfig_);
   }, []);
 
-  // initialize identity, swarm
+  // initialize identity, swarmffd
   useEffect(() => {
     initializeIdentity();
     swarm.config({ myPeerId: currentId() });
