@@ -5,8 +5,7 @@ import state from '../logic/state';
 import { useMqParser } from '../logic/tailwind-mqp';
 import Container from './Container';
 import RoomHeader from './RoomHeader';
-import Icon from '../icons/icon'
-import Crap from '../icons/crap'
+import Icon from '../icons/icon-crap'
 
 const iOS =
   /^iP/.test(navigator.platform) ||
@@ -29,8 +28,7 @@ export default function EnterRoom({
   return (
     <Container>
       <div style={{ maxWidth: '200px' }} className='absolute left-10 grid gap-4 place-items-center'>
-        <Icon></Icon>
-        <Crap style={{ width: '100%' }}></Crap>
+        <Icon style={{ maxWidth: "100%" }}></Icon>
       </div>
       <div className={mqp('p-2 pt-60 md:p-10 md:pt-60')}>
         <RoomHeader {...{ name, description, logoURI, buttonURI, buttonText }} />
@@ -103,12 +101,12 @@ export default function EnterRoom({
           className={
             closed
               ? 'hidden'
-              : 'mt-5 select-none w-full h-12 px-6 text-lg text-white bg-gray-600 rounded-lg focus:shadow-outline active:bg-gray-600'
+              : 'mt-5 select-none w-full px-6 py-3 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 text-center focus:ring-indigo-500'
           }
         >
           Join
         </button>
-
+        <a href="/" className="text-lg opacity-70 mt-8 block w-full text-center">Or return to home page to start a room &#8594;</a>
         <a
           className={
             schedule
