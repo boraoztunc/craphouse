@@ -1,8 +1,9 @@
 import React from "react";
 
-function Icon() {
+function Icon(props) {
     return (
         <svg
+            {...props}
             xmlns="http://www.w3.org/2000/svg"
             width="384"
             height="79"

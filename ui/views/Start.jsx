@@ -10,12 +10,11 @@ import { is } from 'use-minimal-state';
 import state from '../logic/state';
 import Icon from '../icons/icon'
 import Crap from '../icons/crap'
-import Circle from '../icons/circle'
 
 export default function Start({ urlRoomId, roomFromURIError }) {
   let [name, setName] = useState('');
   let [description, setDescription] = useState('');
-  let [color, setColor] = useState('#4B5563');
+  let [color, setColor] = useState('#4F46E5');
   let [logoURI, setLogoURI] = useState('');
   let [buttonText, setButtonText] = useState('');
   let [buttonURI, setButtonURI] = useState('');
@@ -205,7 +204,7 @@ export default function Start({ urlRoomId, roomFromURIError }) {
           </form>
         </div>
         <div>
-          <img src="img/circles.svg"></img>
+          <img style={{ maxHeight: "95%" }} src="img/circles.svg"></img>
         </div>
       </div>
     </div>

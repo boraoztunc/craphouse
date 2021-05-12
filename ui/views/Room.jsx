@@ -1,26 +1,28 @@
-import React, {useEffect, useState} from 'react';
-import state, {swarm} from '../logic/state';
-import {use} from 'use-minimal-state';
+import React, { useEffect, useState } from 'react';
+import state, { swarm } from '../logic/state';
+import { use } from 'use-minimal-state';
 import EnterRoom from './EnterRoom';
 import RoomHeader from './RoomHeader';
-import {useCurrentIdentity} from '../logic/identity';
-import {openModal} from './Modal';
-import {EditRoomModal} from './EditRoom';
+import { useCurrentIdentity } from '../logic/identity';
+import { openModal } from './Modal';
+import { EditRoomModal } from './EditRoom';
 import useWakeLock from '../lib/use-wake-lock';
-import {AudienceAvatar, StageAvatar} from './Avatar';
-import {useMqParser} from '../logic/tailwind-mqp';
+import { AudienceAvatar, StageAvatar } from './Avatar';
+import { useMqParser } from '../logic/tailwind-mqp';
 import Container from './Container';
 import Navigation from './Navigation';
 import UAParser from 'ua-parser-js';
-import {usePushToTalk} from '../logic/hotkeys';
-import {disconnectRoom, maybeConnectRoom} from '../logic/room';
-import {stopAudio} from '../logic/audio';
+import { usePushToTalk } from '../logic/hotkeys';
+import { disconnectRoom, maybeConnectRoom } from '../logic/room';
+import { stopAudio } from '../logic/audio';
+import Icon from '../icons/icon'
+import Crap from '../icons/crap'
 const userAgent = UAParser();
 const inWebView =
   userAgent.browser?.name === 'Chrome WebView' ||
   (userAgent.os?.name === 'iOS' && userAgent.browser?.name !== 'Mobile Safari');
 
-export default function Room({room, roomId}) {
+export default function Room({ room, roomId }) {
   // room = {name, description, moderators: [peerId], speakers: [peerId]}
   useWakeLock();
   usePushToTalk();
@@ -112,12 +114,18 @@ export default function Room({room, roomId}) {
 
   let myHandRaised = raisedHands.has(myPeerId);
 
+
   return (
-    <Container style={{display: 'flex', flexDirection: 'column'}}>
+    <Container style={{ display: 'flex', flexDirection: 'column' }}>
+      <div style={{ maxWidth: '250px' }} className='absolute left-10 grid gap-4 place-items-center'>
+        <Icon></Icon>
+        <Crap style={{ width: '100%' }}></Crap>
+      </div>
       <div
         className={mqp('flex flex-col pt-2 md:pt-10 md:p-10')}
-        style={{flex: '1', overflowY: 'auto', minHeight: '0'}}
+        style={{ flex: '1', overflowY: 'auto', minHeight: '0' }}
       >
+
         <div
           className={
             inWebView
@@ -178,9 +186,9 @@ export default function Room({room, roomId}) {
           Room is closed
         </div>
         <RoomHeader
-          {...{name, description, logoURI, buttonURI, buttonText}}
+          {...{ name, description, logoURI, buttonURI, buttonText }}
           editRoom={
-            iModerate && (() => openModal(EditRoomModal, {roomId, room}))
+            iModerate && (() => openModal(EditRoomModal, { roomId, room }))
           }
         />
 
@@ -193,7 +201,7 @@ export default function Room({room, roomId}) {
                 <StageAvatar
                   key={myPeerId}
                   peerId={myPeerId}
-                  {...{speaking, moderators, reactions, room}}
+                  {...{ speaking, moderators, reactions, room }}
                   peerState={myPeerState}
                   info={myInfo}
                   onClick={() => setEditSelf(true)}
@@ -202,8 +210,8 @@ export default function Room({room, roomId}) {
               {stagePeers.map(peerId => (
                 <StageAvatar
                   key={peerId}
-                  {...{speaking, moderators, room}}
-                  {...{peerId, peerState, reactions}}
+                  {...{ speaking, moderators, room }}
+                  {...{ peerId, peerState, reactions }}
                   peerState={peerState[peerId]}
                   info={identities[peerId]}
                   onClick={iModerate ? () => setEditRole(peerId) : undefined}
@@ -218,7 +226,7 @@ export default function Room({room, roomId}) {
           <ol className="flex flex-wrap">
             {!iSpeak && (
               <AudienceAvatar
-                {...{reactions, room}}
+                {...{ reactions, room }}
                 peerId={myPeerId}
                 peerState={myPeerState}
                 info={myInfo}
@@ -229,7 +237,7 @@ export default function Room({room, roomId}) {
             {audiencePeers.map(peerId => (
               <AudienceAvatar
                 key={peerId}
-                {...{peerId, peerState, reactions, room}}
+                {...{ peerId, peerState, reactions, room }}
                 peerState={peerState[peerId]}
                 info={identities[peerId]}
                 handRaised={iModerate && raisedHands.has(peerId)}
@@ -239,11 +247,10 @@ export default function Room({room, roomId}) {
           </ol>
         </div>
 
-        <div style={{height: '136px', flex: 'none'}} />
+        <div style={{ height: '136px', flex: 'none' }} />
       </div>
-
       <Navigation
-        {...{roomId, room, editRole, setEditRole, editSelf, setEditSelf}}
+        {...{ roomId, room, editRole, setEditRole, editSelf, setEditSelf }}
       />
     </Container>
   );

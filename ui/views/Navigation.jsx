@@ -1,16 +1,16 @@
-import React, {useMemo, useState} from 'react';
-import {leaveRoom} from '../logic/main';
+import React, { useMemo, useState } from 'react';
+import { leaveRoom } from '../logic/main';
 import state from '../logic/state';
-import {set, use} from 'use-minimal-state';
-import {currentId} from '../logic/identity';
-import {sendReaction, raiseHand} from '../logic/reactions';
-import EditRole, {EditSelf} from './EditRole';
-import {breakpoints, useWidth} from '../logic/tailwind-mqp';
+import { set, use } from 'use-minimal-state';
+import { currentId } from '../logic/identity';
+import { sendReaction, raiseHand } from '../logic/reactions';
+import EditRole, { EditSelf } from './EditRole';
+import { breakpoints, useWidth } from '../logic/tailwind-mqp';
 import UAParser from 'ua-parser-js';
-import {requestAudio} from '../logic/audio';
-import {openModal} from './Modal';
-import {InfoModal} from './InfoModal';
-import {MicOffSvg, MicOnSvg} from './Svg';
+import { requestAudio } from '../logic/audio';
+import { openModal } from './Modal';
+import { InfoModal } from './InfoModal';
+import { MicOffSvg, MicOnSvg } from './Svg';
 
 const reactionEmojis = ['❤️', '💯', '😂', '😅', '😳', '🤔'];
 
@@ -52,7 +52,7 @@ export default function Navigation({
 
   let [showReactions, setShowReactions] = useState(false);
 
-  let {color, speakers, moderators} = room || {};
+  let { color, speakers, moderators } = room || {};
 
   let isColorDark = useMemo(() => isDark(color), [color]);
 
@@ -72,6 +72,8 @@ export default function Navigation({
       }
     }
   };
+
+  console.log(color)
 
   return (
     <div
@@ -100,9 +102,9 @@ export default function Navigation({
             // don't allow clicking mute button with space bar to prevent confusion with push-to-talk w/ space bar
             if (e.key === ' ') e.preventDefault();
           }}
-          className="flex-grow select-none h-12 mt-4 px-6 text-lg text-white bg-gray-600 rounded-lg focus:outline-none active:bg-gray-600"
+          className={`inline-flex items-center px-6 py-3 border border-transparent shadow-sm text-base font-medium rounded-md text-white text-3xl ${micOn && micMuted ? 'focus:ring-gray-500' : 'focus:ring-indigo-500'} focus:outline-none focus:ring-2 focus:ring-offset-2 w-full justify-center`}
           style={{
-            backgroundColor: color || '#4B5563',
+            backgroundColor: micOn && micMuted ? '#6B7280' : color || '#4F46E5',
             color: isColorDark ? 'white' : 'black',
           }}
         >
@@ -111,7 +113,7 @@ export default function Navigation({
               {micOn && micMuted && (
                 <>
                   <MicOffSvg
-                    className="w-5 h-5 mr-2 opacity-80 inline-block"
+                    className="inline-block"
                     stroke={color}
                   />
                   Your&nbsp;microphone&nbsp;is&nbsp;off
@@ -120,7 +122,7 @@ export default function Navigation({
               {micOn && !micMuted && (
                 <>
                   <MicOnSvg
-                    className="w-5 h-5 mr-2 opacity-80 inline-block"
+                    className="inline-block"
                     stroke={color}
                   />
                   Your&nbsp;microphone&nbsp;is&nbsp;on
@@ -181,7 +183,7 @@ export default function Navigation({
         {/* Info */}
         <button
           onClick={() => {
-            openModal(InfoModal, {roomId, room});
+            openModal(InfoModal, { roomId, room });
           }}
           className="hidden ml-3 select-none h-12 px-6 text-lg text-black bg-gray-200 rounded-lg focus:shadow-outline active:bg-gray-300"
         >

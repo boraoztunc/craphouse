@@ -71,7 +71,7 @@ export default function Jam({
   let { color } = use(state, 'room');
   let [width, , setContainer, mqp] = useProvideWidth();
   let backgroundColor = useMemo(
-    () => (color && color !== '#4B5563' ? hexToRGB(color, '0.123') : undefined),
+    () => (color && color !== '#111827' ? hexToRGB(color, '0.123') : undefined),
     [color]
   );
 
@@ -83,7 +83,6 @@ export default function Jam({
         position: 'relative',
         height: '100%',
         minHeight: '-webkit-fill-available',
-        backgroundColor,
         ...(style || null),
       }}
       {...props}

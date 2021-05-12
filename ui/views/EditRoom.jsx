@@ -12,7 +12,7 @@ export function EditRoomModal({roomId, room, close}) {
 
   let [name, setName] = useState(room.name || '');
   let [description, setDescription] = useState(room.description || '');
-  let [color, setColor] = useState(room.color || '#4B5563');
+  let [color, setColor] = useState(room.color || '#111827');
   let [logoURI, setLogoURI] = useState(room.logoURI || '');
   let [buttonURI, setButtonURI] = useState(room.buttonURI || '');
   let [buttonText, setButtonText] = useState(room.buttonText || '');
