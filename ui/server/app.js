@@ -32,10 +32,11 @@ console.log(urls);
 const pantryApiPrefix = `${urls.pantry}/api/v1/rooms`;
 
 const defaultMetaInfo = {
-  ogTitle: 'Jam',
-  ogDescription: 'Join this audio room',
+  ogTitle: 'Craphouse - audio space for all the crap',
+  ogDescription: 'Craphouse is an audio space for chatting, brainstorming, debating, or any crap you want to talk about.',
   ogUrl: urls.jam,
   ogImage: `${urls.jam}/img/jam-app-icon.jpg`,
+  ogKeywords: 'audio chat, clubhouse, web app',
   favIcon: '/img/jam-app-icon.jpg',
 };
 
@@ -229,8 +230,17 @@ app.use(async (req, res) => {
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta property="og:title" content="<%= metaInfo.ogTitle %>" />
     <meta property="og:description" content="<%= metaInfo.ogDescription %>" />
+    <meta property="og:keywords" content="<%= metaInfo.ogKeywords %>" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="<%= metaInfo.ogUrl %>" />
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary">
+    <meta property="twitter:image" content="<%= metaInfo.ogUrl %>">
+    <meta property="twitter:domain" content="<%= metaInfo.ogUrl %>">
+    <meta property="twitter:url" content="<%= metaInfo.ogUrl %>">
+    <meta name="twitter:creator" content="Craphouse">
+    <meta name="twitter:title" content="<%= metaInfo.ogTitle %>">
+    <meta name="twitter:description" content="<%= metaInfo.ogDescription %>">
     <meta
       property="og:image"
       content="<%= metaInfo.ogImage %>"
