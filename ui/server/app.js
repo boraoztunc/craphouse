@@ -35,7 +35,7 @@ const defaultMetaInfo = {
   ogTitle: 'Craphouse - audio space for all the crap',
   ogDescription: 'Craphouse is an audio space for chatting, brainstorming, debating, or any crap you want to talk about.',
   ogUrl: urls.jam,
-  ogImage: `${urls.jam}/img/jam-app-icon.jpg`,
+  ogImage: `${urls.jam}/img/feature-image.png`,
   ogKeywords: 'audio chat, clubhouse, web app',
   favIcon: '/img/jam-app-icon.jpg',
 };
