@@ -1,34 +1,25 @@
-<p align="center">
-  <img title='Jam mascot by @eejitlikeme'
+<img width="1440" alt="Craphouse" src="https://github.com/user-attachments/assets/0a53909c-b928-42bf-b434-cd6a9cc6afd6">
+
+# Craphouse
+When Clubhouse was first released as invite-only, I was left out and pissed. 
+So created Craphouse, and developed an open audio space for chatting, or any crap people wanted to talk about.
+
+<p align="left">
+<img title='Jam mascot by @eejitlikeme'
        src="https://jam.systems/img/jam.jpg"
-       width="300"
-       height="300"/>
+       width="100"
+       height="100"/>
 </p>
 
-# Jam
+🍞 Built with Jam, an open-source alternative to Clubhouse, Twitter Spaces, and similar audio spaces.
 
-<a href="https://discord.gg/BfakmCuXSX">![Discord](https://img.shields.io/discord/813009761468416000?label=Jam%20discord&logo=discord)</a> <a href="https://twitter.com/jam_systems">![Twitter Follow](https://img.shields.io/twitter/follow/jam_systems?style=social)</a> <a href="https://github.com/jam-systems/jam">![GitHub Repo stars](https://img.shields.io/github/stars/jam-systems/jam?style=social)</a> <a href="https://www.npmjs.com/package/jam-react">![npm](https://img.shields.io/npm/v/jam-react?label=jam-react%20on%20npm)</a>
+With Jam you can create audio rooms for panel discussions, jam sessions, free-flowing conversations, debates, theatre plays, musicals, and more. The only limit is your imagination.
 
-🍞 Jam is an open source alternative to Clubhouse, Twitter Spaces and similar audio spaces.
+try Jam for free on [jam.systems](https://jam.systems/)
 
-With Jam you can create audio rooms that can be used for panel discussions, jam sessions, free flowing conversations, debates, theatre plays, musicals and more. The only limit is your imagination.
-
-try Jam for free on [https://jam.systems/](https://jam.systems/)
-
-get your own Jam server hosted by us with the **[Jam _Early Access_ Program here](https://jamshelf.com)**
+get your own Jam server hosted by us with the [Jam Early Access Program here](https://jamshelf.com)
 
 join the [Jam community on 🎧 Discord](https://discord.gg/BfakmCuXSX)
-
-follow [Jam on 🐣 Twitter](https://twitter.com/jam_systems)
-
-find [Jam on 😽 Product Hunt](https://www.producthunt.com/posts/jam-d17ff3cc-556c-4c17-8140-5211cb1cd81f)
-
-🗓 join our weekly Jam Jam (a Jam where we jam about Jam) every [Wed @ 8pm CEST (2pm EDT)](http://jam.systems/jam-jam-ns4a)
-
-
-add the `/jam` shortcut to your Slack workspace:
-
-<a href="https://slack.com/oauth/v2/authorize?client_id=1827991458162.1827997742338&scope=chat:write,chat:write.public,commands&user_scope="><img alt="Add to Slack" height="40" width="139" src="https://platform.slack-edge.com/img/add_to_slack@2x.png" /></a>
 
 add Jam to your [Wordpress](https://medium.com/jam/add-jam-to-wordpress-ca1932cd8ff3), [Webflow](https://medium.com/jam/add-jam-to-webflow-d8a680959007) or [Shopify](https://medium.com/jam/add-jam-to-shopify-a77865cd7b6f):
 
@@ -130,10 +121,3 @@ Directory overview:
 `signalhub`/ a simple server for managing WebRTC connections for Jam
 
 `ui`/ web based user interface based on the React framework
-
-
-## Buy Us ☕
-
-**BTC:** 3HM1zPtLuwCGarbihNYVjFVwbFrFe9keqh
-
-**ETH:** 0xe15265b2a309f0d20038e10b8df5a12fb5e916f8
